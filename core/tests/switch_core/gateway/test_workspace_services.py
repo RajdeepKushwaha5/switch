@@ -237,7 +237,13 @@ class TestResults:
     ) -> None:
         admin = await _person(harness.session_factory, "admin", member_role="admin")
         services = _by_slug(await _get(harness, admin))
-        assert set(services) == {"atlassian", "datadog", "github", "google-workspace"}
+        assert set(services) == {
+            "atlassian",
+            "datadog",
+            "github",
+            "google-workspace",
+            "notion",
+        }
         assert services["datadog"] == {
             "slug": "datadog",
             "name": "Datadog",

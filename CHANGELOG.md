@@ -44,6 +44,15 @@ version of their own to them without also giving them a release of their own.
 
 ### [Unreleased]
 
+#### Added
+- **The Notion connection.** A person connects Notion from Switch Console,
+  picks the workspace at Notion's consent screen, and a granted agent searches,
+  reads and updates its pages, databases and comments, as them, through
+  Notion's remote MCP server. Core registers its own client, so nothing is set
+  up on the server. A Notion MCP token reaches only Notion MCP, so an entry's
+  identity can now be read from the sign-in's own token answer instead of an
+  identity call; every other entry keeps its call.
+
 #### Fixed
 - **The Teams command menu fits Teams' limit again.** Switch's own Teams app
   listed thirteen commands, one more than Teams allows, once `/remove-agent`
